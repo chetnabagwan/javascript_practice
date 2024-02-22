@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic content</title>
+</head>
+<body>
+    <div id="output">HELLO</div>
+    <script>
+        var output = document.getElementById("output"); //accessing the element
+        output.innerHTML = "Hello <br> World"; //writing HTML content or modifying that element
+        output.innerText = "Hello <br> World"; //writing the text as it is
+        console.dir(document);
+
+
+    </script>
+    
+</body>
+</html>
