@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Method 1 = defining object
+        var obj1 = { color:"red", make:"ford",doors:2,model:"mustang"};
+        console.log(obj1);
+
+        //Method 2 = using Object constructor
+        // var obj2 = new Object();
+        // obj2.color = "red";
+        // obj2.make = "ford";
+        // obj2.doors = 2;
+        // obj2.model = "mustang";
+        // console.log(obj2);
+
+        console.log(obj1.color); //retreiving obj properties
+        console.log(obj1["color"]); // it has some advantages like we can dynamically change the property of the value.
+        obj1["color"] = "pink";
+
+        delete obj1.color;//deletes a property of an object
+        console.log(obj1);
+
+        console.log(typeof obj1);
+        
+        var property = prompt("What do you want to know about car?");
+        console.log(obj1[property]);
+
+        //looping over objects
+        for(var prop in obj1){
+            console.log(prop + " : " + obj1[prop]);
+        }
+    </script>
+    
+</body>
+</html>

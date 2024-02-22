@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var john = {
+            age : 21,
+            hair : "brown",
+            eyes : "blue",
+            job : "developer"
+        }
+
+        var friends = {
+            friend1 : john,
+            friend2 : {
+                name : "mike",
+                age : 24,
+                hair : "black",
+                eyes : "brown",
+                job : "doctor"
+            }
+        }
+
+        console.log(friends.friend1);
+        console.log(friends.friend1["age"]);
+        console.log(friends.friend2);
+        
+        john.age = 30;
+        console.log(friends.friend1);
+
+
+    </script>
+    
+</body>
+</html>
