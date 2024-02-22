@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    
+</head>
+<body>
+    <h1>Guessing game</h1>
+    <script>
+        var animals = ["cat","dog","rabbit","bird","fish"]; 
+        var randomIndex = Math.floor(Math.random()*animals.length);
+        var randomAnimal = animals[randomIndex];// generates random numbers between 0-5
+        var message = prompt("Which index value is " + randomAnimal);
+        var response = (message == randomIndex) ? "Correct guess" : "Incorrect guess";
+       alert(response);
+    </script>
+    
+</body>
+</html>

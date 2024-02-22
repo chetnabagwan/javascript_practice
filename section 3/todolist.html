@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title></title>    
+    </head>
+    <body>
+        <div>
+            <h1>TODO List</h1>
+        </div>
+        <script> 
+        var tasks = [1,"eat lunch",2,"play chess"];
+        var progress = ["done","in progress","todo"];
+        var question1 = prompt("Which task 1-"+tasks.length+"?");
+        var question2 = prompt("status 1 = done 2 = in progress 3 = todo?");
+        // console.log(question1+1);
+        console.log("today you will " + tasks[(question1-1)] + " status of task = " + progress[(question2-1)]);
+
+        </script>
+    </body>
+</html>

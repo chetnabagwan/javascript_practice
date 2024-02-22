@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var animals = ["dog","cat","rabbit","fish","fox"];
+        animals.push("bird");//adds item ina na array at the end
+        lastAnimal = animals.pop();//removes last item from an array and returns it
+        firstAnimal = animals.shift();//removes first item in an array and returns it
+        animals.unshift("horse");
+        alert(animals);
+        alert(animals.splice(1,3));//removes more than one item from the array and returns it
+        alert(animals); 
+        // alert(animals.reverse());//reverses the array items
+        alert(animals.sort());// sorts the array by value
+        
+        console.log(animals);
+        var startVal = animals.length; 
+        animals[10] = "mouse";
+        animals.fill("mouse",startVal,(animals.length-1));//fills the array with the specified values to particular index
+        
+    
+
+    </script>
+</body>
+</html>
