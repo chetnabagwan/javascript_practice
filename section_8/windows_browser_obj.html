@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows browser object</title>
+</head>
+<body>
+    <div id="wrapper">
+    </div>
+    <script>
+        var output = document.getElementById('wrapper');
+        console.dir(window);
+        for(var prop in window){
+            document.write(prop + " " + window[prop] +"<br>");
+        }
+        output.innerHTML += window.innerHeight + "" + window.innerWidth;
+
+        output.innerHTML += window.location;
+
+        // alert("hello");
+
+        var w = window.open('time.html');
+        w.onbeforeunload =  function(){
+            console.log("hello");
+            alert("Don't go anywhere!");
+        }
+
+
+    </script>
+</body>
+</html>

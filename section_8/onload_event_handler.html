@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onload</title>
+    <!-- Events provide dynamic interface to a webpage,to handle these events ,we have to attach event handler to it. -->
+    <!-- When the browser has finished loading the page,events that happen after loading the page -->
+</head>
+<body onload="myFun('body')">
+    <div id="wrapper">Page 1</div>
+    <script>
+        var output = document.getElementById('wrapper');
+        window.onload = function (event) {
+            myFun('window');//onload overrides the value of the element
+        }
+
+        function myFun(a) {
+            output.innerHTML = " WELCOME " + a;
+        }
+    </script>
+</body>
+</html>

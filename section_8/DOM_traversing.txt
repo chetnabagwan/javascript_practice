@@ -1,0 +1,9 @@
+What is document object?
+How to traverse through the document object to the different elements.
+
+document.body.children
+document.myForm.children[1]
+
+We can also chnage and manipulate the elements value through inspect and 
+console, and while doing this we are not changing any
+of the website's source code. We are just changing the instance of website that's been loaded in DOM that we have access to

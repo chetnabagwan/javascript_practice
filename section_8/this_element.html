@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This element</title>
+</head>
+<body>
+    <div id="wrapper">Page 1</div>
+    <form name = "myForm">
+        <input type = "button" onclick = "myFunc(this)" value="click 1">
+        <input type = "button" onclick = "myFunc(this)" value="click 2">
+
+        <!-- For a typical function, the value of this is the object that
+        the function is accessed on. In other words, if the function
+        call is in the form obj.f(), then this refers to obj.  -->
+    </form>
+    <script>
+        var output = document.getElementById('wrapper');
+        function myFunc(t){
+            console.dir(t);
+            output.innerHTML = t.value;
+        }
+    </script>
+    
+</body>
+</html>

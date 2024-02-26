@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Time Out</title>
+</head>
+<body>
+    <div id="wrapper"></div>
+    <input type="button" onclick="myVar = setInterval(start,5000)" value ="start">
+    <!-- The setInterval() method repeats a given function at every given time-interval. -->
+
+    <input type ="button" onclick = "clearInt()" value = "stop">
+
+    <script>
+        var output = document.getElementById('wrapper');
+        
+        function start(){
+            alert("hello world");
+        }
+        function clearInt(){
+            clearInterval(myVar);
+            //The clearInterval() method stops the executions of the function specified in the setInterval() method
+        }
+
+    </script>
+</body>
+</html>
