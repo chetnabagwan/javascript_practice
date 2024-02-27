@@ -1,0 +1,43 @@
+<!-- Make table from array of names which will have 3 columns -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Table</title>
+    <style>
+        td{
+            padding:10px;
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="message">Table of freinds</div>
+    <div id="output"></div>
+    <script>
+        window.onload = build;
+        var myArray = ["Laurence", "Mike", "John", "Larry", "Kim", "Joanne", "Lisa", "Janet", "Jane"];
+        var message= document.getElementById('message');
+
+        function build(){
+            var html = "<h1>My Friends Table</h1><table>";
+            for (var x = 0; x < myArray.length; x++) {
+                html += '<tr data-row="' + x + '"><td>' + myArray[x] + '</td><td class="box" >' + (x + 1) + '</td><td></td></tr>';
+            }
+            html += '</table>';
+
+            document.getElementById('output').innerHTML = html;
+            var elbox = document.querySelectorAll('#output .box');
+            var a;
+            for (var x = 0; x < elbox.length; x++) {
+                elbox[x].onclick = function () {
+                    //a = this.parentElement.getAttribute('data-row');
+                    a = this.closest('[data-row]').getAttribute('data-row');
+                    console.log(myArray[a]);
+                    message.innerHTML = myArray[a] + " is on row " + a;
+                }
+            }
+        }
+    </script> 
+</body>
+</html>

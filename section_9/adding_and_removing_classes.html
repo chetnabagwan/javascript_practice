@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Adding and removing classes</title>
+    <style>
+        .box1 {
+            background-color: aqua;
+            font-size: 1.5em;
+            color: #fff;
+        }
+        
+        .box2 {
+            background-color: red;
+            font-size: 0.5em;
+            color: #ddd;
+        }
+        #one,#two,#three {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            border: 1px solid black;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="one" class="myClass">Box one</div>
+    <div id="two" class="myClass active">Box two</div>
+    <div id="three" class="myClass">Box three</div>
+    <script>
+        var el = document.querySelectorAll('.myClass');
+        for (var x = 0; x < el.length; x++) {
+            el[x].onclick = function () {
+                updateClass(el, 'active', 'remove');
+                if (!this.classList.contains('active')) {
+                    this.classList.add('active');
+                }
+                this.classList.toggle('box1');
+            }
+        }
+
+        function updateClass(ele, classname, action) {
+            for (var x = 0; x < ele.length; x++) {
+                ele[x].classList[action](classname);
+            }
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li id="web-id">PHP</li>
+        <li>HTML</li>
+        <li class="web-class">CSS</li>
+        <li class="web-class">JavaScript</li>
+    </ul>
+    <script>
+        // To get the HTML content of the first li, whose id is web-id, with getElementById:
+        var a= document.getElementById('web-id').innerHTML;
+
+        // What if we want to get the HTML content of the thirdli? 
+        // We will not be able to use getElementById because there 
+        // is no id associated with it. But we can do so with 
+        // querySelector.
+        var b = document.querySelector('ul .web-class').innerHTML;
+
+        console.log(a);
+        console.log(b);
+    </script>
+</body>
+</html>

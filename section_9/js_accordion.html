@@ -1,0 +1,50 @@
+<!-- Accordion allows us to show content and hide content by having a title 
+    and then clicking that title allow us to show the additional content. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Accordion</title>
+    <style>
+        .content{
+            border:1px;
+            padding: 20px;
+            font-size: 0.8em;
+            display: none;
+        }
+        .acc{
+            font-size:1.5em;
+            background-color: #ddd;
+        }
+        .active{
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <div class="acc">Title 1 </div>
+    <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, officia.
+        <img src="http://via.placeholder.com/350x150?text=Image1"></div>
+    
+    <div class="acc">Title 2</div>
+    <div class="content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est libero rerum quia quam tempore vitae!
+        <img src="http://via.placeholder.com/350x150?text=Image2"></div>
+    <script>
+        var aTitle = document.querySelectorAll('.acc');
+        var c = document.querySelectorAll('.content');
+        for(var x=0;x<aTitle.length;x++){
+            aTitle[x].onclick = function(){
+                closeContent(this.nextElementSibling);
+                this.nextElementSibling.classList.toggle('active');
+            }
+        }
+        function closeContent(t){
+            for(var x=0;x<c.length;x++){
+                if(t != c[x]){
+                    c[x].classList.remove('active');
+                }
+            }
+        }
+    </script>
+    </body>
+</html>
