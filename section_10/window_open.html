@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open a new window</title>
+</head>
+<body>
+    <div id="message">Open a new window</div>
+    <input type="button" value="pop" onclick="popUp()">
+    <input type="button" value="close" onclick="popClose()">
+
+    <script>
+        // opening a new window using JS
+        var w;
+        function popUp(){
+            var url = "index.html";
+            w = window.open(url,"_blank","top =100,left=500,width=500,height=400");
+        }
+        
+        function popClose(){
+            w.close();
+        }
+    </script>
+</body>
+</html>

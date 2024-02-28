@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>strings</title>
+</head>
+<body>
+    <div id ="output">JS Strings methods</div>
+    <script>
+        var i = prompt("Enter a string:");
+        var gl = prompt("Guess the length: ");
+
+        var s = "Hello";
+        var a = new String("Hello World");
+        var l = a.length;
+        var c = a.charAt(1);
+
+        function checkGuess(){
+            var len = i.length;
+            if(len == Number(gl)){
+                var t = "Correct guess!";
+                document.getElementById('output').innerText = t;
+                alert(true);
+            }
+            else{
+                var f ="Incorrect guess!";
+                document.getElementById('output').innerText = f;
+                alert(false);
+            }
+        }
+        checkGuess();
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string manipulation</title>
+</head>
+<body>
+    <div id = "msg">String string manipulation methods</div>
+    <input type="text" id ="myString">
+
+    <script>
+        var message = document.getElementById('msg');
+        var str = message.innerText;
+        var l = str.toLowerCase();
+        var u = str.toUpperCase();
+        var i = str.indexOf('mani');
+        var li = str.lastIndexOf('ing');
+        var m = str.substring(0,5); // its second arg takes index which is not included
+        var n = str.substr(0,6); // its second srgument is number of characters we want after the first arg index.
+
+    </script>
+</body>
+</html>
