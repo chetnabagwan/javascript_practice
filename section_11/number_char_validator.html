@@ -1,0 +1,67 @@
+<html>
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+    </style>
+</head>
+<body>
+    <div id="output">Complete JavaScript Course</div>
+    <input type="text" id="email" value="email@gmail.com">
+    <input type="text" id="num" value="123321">
+    <input type="text" id="cha" value="characters">
+    <input type="button" onclick="myFun()" value="Validate Inputs">
+    <script>
+        var output = document.getElementById('output');
+        function cEmail(e) {
+            var p = /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z.]+)/ig;
+            var r = e.match(p);
+            return r == null ? false : true;
+        }
+        function cNum(e) {
+            var p = /\D/; // true if not a digit (\d = true if it is a digit) \s = for whitespace
+            var r = e.match(p);
+            return r == null ? true : false;
+        }
+        function cChar(e) {
+            var p = /[^A-Za-z]/ig; //negation true if any digit is entered
+            var r = e.match(p);
+            return r == null ? true : false;
+        }
+        function myFun() {
+            var i = document.getElementsByTagName('input');//iterating over all the inputs
+            for (var x = 0; x < i.length; x++) {
+                //console.log(i[x]);
+                if (i[x].value == "") {
+                    console.log('No Value in ' + i[x].id);
+                }
+                if (i[x].type == "text") {
+                    if (i[x].id == "email") {
+                        if (cEmail(i[x].value)) {
+                            console.log('Email Valid');
+                        }
+                        else {
+                            console.log('Bad Email');
+                        }
+                    }
+                    if (i[x].id == "num") {
+                        if (cNum(i[x].value)) {
+                            console.log('Num only Valid');
+                        }
+                        else {
+                            console.log('Non Number in the string');
+                        }
+                    }
+                    if (i[x].id == "cha") {
+                        if (cChar(i[x].value)) {
+                            console.log('Char only Valid');
+                        }
+                        else {
+                            console.log('Non Char is in the string');
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="output">Reg expression methods</div>
+    <input type="text" id="input" >
+    <input type="button" onclick="check()" value="Check">
+    <script>
+        function check(){
+            var p = new RegExp("Java","ig");
+            var text = document.getElementById('input').value;
+            
+            var i = p.exec(text); // exec() = Tests for a match in a string. Returns the first match
+            console.log(i);
+            var result = p.test(text); // test() = Tests for a match in a string. Returns true or false
+            console.log(result);
+            
+            var i = p.exec(text); // exec() = Tests for a match in a string. Returns the first match
+            console.log(i);
+            // console.log(text);
+
+
+        }
+        
+    </script>
+    
+</body>
+</html> 

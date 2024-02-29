@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression</title>
+</head>
+<body>
+    <div id = "output">Regular Expression</div>
+    <input type="button" onclick="myFunc()" value = "click">
+    <script>
+        var output = document.getElementById("output");
+        let s = "Hello everybody.Today is a good day!Live and enjoy each moment.Today is beautiful."
+        function myFunc(){
+            var p =/Today/; // regex is written in // delimiters and is case sensitive check by default 
+            var q = /today/i; //to match case insensitive
+            console.log(p.toString()); //Returns the string value of the regular expression
+            var r = s.match(p);
+            var rq = s.match(q);
+            console.log(r);
+            console.log(rq);
+
+            var a = /today/ig; //matches all occurrences /g for global match , /m to perform multiline matching
+            console.log(s.match(a));
+
+            var b = /atoday/ig; //null is returned if no match is found
+            console.log(s.match(b));
+
+        }
+    </script>
+    
+    
+</body>
+</html>

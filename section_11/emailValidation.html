@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- We can use RegEx for pulling out email addresses out of a string.-->
+    <div id="output">Complete JavaScript Course</div>
+    <input type="text" id="email" value="email@gmail.com">
+    <input type="button" onclick="myFunc()" value="Validate">
+    <Script>
+        var output = document.getElementById('output');
+        function myFunc(){
+            e = document.getElementById("email").value;
+            var p = /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z.]+)/ig;
+            var r =e.match(p);
+            var ans = r == null?false:true;
+            console.log(ans);
+        }
+
+    </Script>
+</body>
+</html>
