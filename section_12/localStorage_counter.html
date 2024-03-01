@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local storage counter</title>
+</head>
+<body>
+    <div id="output">Local storage counter</div>
+    <script>
+        // var msg = "hello world";
+        // if(localStorage.getItem('test1')){
+        //     document.getElementById('output').innerHTML = localStorage.getItem('test1');  
+        // }
+
+        // localStorage.setItem('test1',msg);
+
+        if (localStorage.getItem('count')){
+            var cnt = Number(localStorage.getItem('count'))+1;
+            localStorage.setItem('count',cnt);
+            document.getElementById('output').innerHTML += cnt;
+        }
+        else{
+            localStorage.setItem('count',1);
+        }
+    </script>
+    
+</body>
+</html>
