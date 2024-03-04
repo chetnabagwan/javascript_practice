@@ -1,0 +1,39 @@
+<!-- canvas tag is new feature of HTML 5 
+after creating canvas we will create a drawing object-->
+<!-- 
+getContext('2d') = gives us the ability to interact with our canvas element in our HTML and drawing is going to be in 2D, then we can do drawing in our canvas.We get a default size of the canvas but we can adjust the size
+
+There are many methods related to canvas object. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Canvas</title>
+    <style>
+        #canvas1{
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="output">HTML Canvas</div>
+    <canvas id="canvas1"></canvas>
+    <script>
+        var canvas = document.getElementById('canvas1');
+        var ctx= canvas.getContext('2d');
+        canvas.width = 400;
+        canvas.height = 500;
+
+        ctx.fillStyle = 'pink';
+        ctx.fillRect(10,30,100,100); //by default black colour
+
+        ctx.strokeRect(10,150,100,100);
+        
+
+        
+    </script>
+    
+</body>
+</html>

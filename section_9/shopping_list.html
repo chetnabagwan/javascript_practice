@@ -1,0 +1,33 @@
+<!-- Adding items dynamically to our shopping list -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping list </title>
+</head>
+<body>
+    <div>
+        <input type ="text" id = "additem">
+        <input type = "button" id = "addnew" value="Add to list">
+    </div>
+    <div id = "output">
+        <h1>Shopping List</h1>
+        <ol id="slist">
+
+        </ol>
+
+    </div>
+    <script>
+        document.getElementById('addnew').onclick = function(){
+            addOne();
+        }
+        function addOne(item){
+            var item = document.getElementById('additem').value;
+            var li = document.createElement('li');
+            li.appendChild(document.createTextNode(item));
+
+        }
+    </script>
+</body>
+</html>

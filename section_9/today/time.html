@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date and time</title>
+</head>
+<body>
+    <div id="output" style="font-weight:bold; font-size: large; color:#FF0000;text-align: center; border:1px solid red;background:yellow; height:50px;padding-top:15px;padding-bottom:15px;">
+    <h2 style="font-weight:bold"> Have a Good day!</h2>
+    </div>
+    
+    <script>
+        setInterval(currentTime,1000);
+        function currentTime(){
+        var time = Date();
+        var output = document.getElementById("output").innerHTML = time;
+        }
+    </script>
+</body>
+</html>
