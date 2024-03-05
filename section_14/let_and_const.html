@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+</head>
+
+<body>
+    <div id="output">Complete JavaScript Course </div>
+    <script>
+        console.log(a);// undefined 
+        console.log(b);// Reference error
+        console.log(c);// Reference error
+
+        // window.a = undefined
+        // window.b and window.c = Reference error beacause let and const are not held within the window object
+
+        // Also let variable value can be changed but it can't be redeclared
+        // const value can't be changed
+        
+        var a = "hello world";
+        const b = "constant"; // not hoisted
+        let c = "hello world";// not hoisted
+
+        for (var i = 0; i < 5; i++) {
+            console.log(i);// i is accessible within this block scope only
+        }
+
+        if (a) {
+            let d = "works";
+            console.log(d);//works
+        }
+        else {
+            let d = "not working";
+            console.log(d); //works
+        }
+        console.log(d);//d is not accessible here
+    </script>
+</body>
+
+</html>
