@@ -1,0 +1,36 @@
+<!-- AJAX = Asynchronous JavaScript And XML !-->
+<!-- AJAX is not a programming language, it's a combination of allowing us to make an HTTP request in background using Javascript,
+to load content into our web page without reloading the web page.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX example</title>
+</head>
+<body>
+    <div id="demo">
+        <h2> Changing the text..</h2>
+        <button type="button" onclick="loadContent()">Change content</button>
+    </div>  
+    <script>
+        function loadContent(){
+            // Create an XMLHttpRequest object
+            const xhttp = new XMLHttpRequest();
+
+            // Define a callback function
+            xhttp.onload = function(){
+                var myObj = JSON.parse(this.responseText);
+                document.getElementById("demo").innerHTML = this.responseText;
+            }
+
+            // Send a request
+            xhttp.open("GET", "file.json", true);
+            xhttp.send();
+
+        }
+
+    </script>
+</body>
+</html>
