@@ -8,12 +8,12 @@ let {firstname, lastname} = person; //destructuring person obj and pulling out f
 console.log(firstname);
 console.log(lastname);
 
-let myArr = ["JavaScript", "JS", "JS6", "ECMA"];
+let myArr = ["JavaScript", "JS", "JS6", "ECMA","Python","Typescript"];
 console.log(myArr);
 
-let [a, b, c, d, e = "Java"] = myArr; //destructuring the array
+let [a, b, c,...d] = myArr; //destructuring the array
 console.log(a);
 console.log(b);
 console.log(c);
 console.log(d);
-console.log(e);
+// console.log(e);
