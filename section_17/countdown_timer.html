@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="output"></div>
+    <button>Start</button>
+ 
+    <script>
+        const btn = document.querySelector('button');
+        const output = document.querySelector('.output');
+        output.style.color = 'black';
+        
+        btn.addEventListener('click',()=>{
+        let counter = 11;
+        const countdown = setInterval(()=>{
+        counter--;
+        output.innerText = counter;
+        output.style.color = 'red';
+        if(counter < 1){
+        output.style.color = 'black';
+        output.innerText = 'Blast Off!';
+        clearInterval(countdown);
+        }
+        },1000);
+        })
+   
+    </script> 
+</body>
+</html>

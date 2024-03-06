@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Course</title>
+</head>
+<body>
+<div>
+<input type="text" id="nums">
+<button id="btn">Check</button>
+</div>
+<script >
+    const nums = document.querySelector('#nums');
+    const btn = document.querySelector('#btn');
+     
+    btn.onclick = ()=>{
+    const inputValue = nums.value;
+    const patt = /^[0-3]*$/g;
+    const results = inputValue.match(patt);
+    console.log(results);
+    const valNum = results != null;
+    console.log(valNum);
+    }</script>
+</body>
+</html>
+ 
